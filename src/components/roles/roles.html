@@ -1,0 +1,62 @@
+<!-- Data Binding -->
+<div>
+  <h1>This is Roles page</h1>
+
+  <!-- Interpolation {{}} -->
+  <div class="row">
+    <div class="col-3">
+      <p>{{ firstName }}</p>
+    </div>
+    <div class="col-3">
+      <p>{{ angularVersion }}</p>
+    </div>
+    <div class="col-3">
+      <p>{{ currentDate }}</p>
+    </div>
+    <div class="col-3">
+      <p>{{ selectedState }}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Property Binding [] -->
+    <div class="col-3">
+      <!-- Two-way Data Binding [] -->
+      <input type="text" [(ngModel)]="firstName" />
+    </div>
+    <div class="col-3">
+      <input type="text" [value]="firstName" class="form-control" />
+    </div>
+    <div class="col-3">
+      <input [type]="inputType" />
+    </div>
+
+    <!-- Data Binding -->
+    <div class="col-3">
+      <select [(ngModel)]="selectedState">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JS">JS</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Event Binding -->
+  <div class="row">
+    <div class="col-3">
+      <button class="btn btn-success" (click)="showWelcomeAlert()">
+        Show alert
+      </button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-success" (click)="showMessage('Welcome to React')">
+        React Message
+      </button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-success" (click)="showMessage('Welcome to .NET')">
+        .NET Message
+      </button>
+    </div>
+  </div>
+</div>
